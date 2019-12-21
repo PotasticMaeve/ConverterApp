@@ -4,20 +4,23 @@ import { Actions } from 'react-native-router-flux';
 
 class CardMenu extends Component {
     constructor(props) {
-        super(props);
+        super(props);8
         this.state = {
         };
     }
 
     render() {
         return (
-            <TouchableOpacity style={s.container}>
-                <View style={{ height:'70%', width: '100%', backgroundColor: 'grey', borderRadius:15}}>
-                    <Image source={this.props.image}/>
+            <TouchableOpacity style={s.container} activeOpacity={0.7}>
+                <View style={{ height:'70%', width: '100%', borderRadius:15}}>
+                    <Image
+                        source={{ uri: this.props.image}}
+                        style={{height: '100%', width: '100%', borderRadius:15}}
+                    />
                 </View>
                 <View style={s.list}>
                     <Text style={{ fontSize:15 }}>{this.props.name}</Text>
-                </View>
+                </View>         
             </TouchableOpacity>
         );
     }
@@ -31,7 +34,9 @@ const s = StyleSheet.create({
         flexDirection: 'column',
         backgroundColor: 'white',
         borderRadius: 15,
-        shadowRadius: 40
+        shadowRadius: 40,
+        opacity: .8,
+        borderWidth: .1
     },
     textWrapper: {
         flex: .3,
@@ -48,7 +53,7 @@ const s = StyleSheet.create({
         alignItems: 'center',
         justifyContent:'center',
         margin : 5,
-        marginLeft:1
+        marginLeft: 0
     }
 });
 
