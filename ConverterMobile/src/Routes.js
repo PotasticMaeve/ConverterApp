@@ -14,7 +14,6 @@ const Routes = () => {
         <Scene key="Home"
           hideNavBar={true}
           component={Home}
-          title="Home"
           initial
         />
         <Scene

@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, Picker} from 'react-native';
 import { Actions } from 'react-native-router-flux';
+import Jarak from '../pages/Jarak';
+import MenuRoutes from '../MenuRoutes';
 
 class CardMenu extends Component {
     constructor(props) {
-        super(props);8
+        super(props);
         this.state = {
         };
     }
 
     render() {
         return (
-            <TouchableOpacity style={s.container} activeOpacity={0.7}>
+            <TouchableOpacity 
+                style={s.container} 
+                activeOpacity={0.7}
+                onPress={() => Actions.Jarak()}
+            >
                 <View style={{ height:'70%', width: '100%', borderRadius:15}}>
                     <Image
                         source={{ uri: this.props.image}}

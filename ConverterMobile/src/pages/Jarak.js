@@ -10,7 +10,7 @@ class Jarak extends Component {
 
   render() {
     return (
-      <View>
+      <View style={{ justifyContent: 'center', alignContent: 'center', backgroundColor: 'green'}}>
         <Text> Jarak </Text>
       </View>
     );
