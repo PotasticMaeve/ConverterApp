@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
 import { 
   Router, 
   Scene,
@@ -17,18 +16,6 @@ import Daya from './pages/Daya';
 import Gaya from './pages/Gaya';
 import IntenCahaya from './pages/IntenCahaya';
 import JumlahZat from './pages/JumlahZat';
-
-import Jarak from './pages/Jarak';
-import Kecepatan from './pages/Kecepatan';
-import Waktu from './pages/Waktu';
-import Massa from './pages/Massa';
-import Temperatur from './pages/Temperatur';
-import Energi from './pages/Energi';
-import Daya from './pages/Daya';
-import Gaya from './pages/Gaya';
-import IntenCahaya from './pages/IntenCahaya';
-import JumlahZat from './pages/JumlahZat';
-
 
 const Routes = () => {
   return (
