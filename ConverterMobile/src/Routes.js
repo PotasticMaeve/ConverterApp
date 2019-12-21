@@ -4,6 +4,7 @@ import {
   Router, 
   Scene,
 } from 'react-native-router-flux';
+
 import Home from './pages/Home';
 import MainMenu from './pages/MainMenu';
 import Jarak from './pages/Jarak';
@@ -16,6 +17,18 @@ import Daya from './pages/Daya';
 import Gaya from './pages/Gaya';
 import IntenCahaya from './pages/IntenCahaya';
 import JumlahZat from './pages/JumlahZat';
+
+import Jarak from './pages/Jarak';
+import Kecepatan from './pages/Kecepatan';
+import Waktu from './pages/Waktu';
+import Massa from './pages/Massa';
+import Temperatur from './pages/Temperatur';
+import Energi from './pages/Energi';
+import Daya from './pages/Daya';
+import Gaya from './pages/Gaya';
+import IntenCahaya from './pages/IntenCahaya';
+import JumlahZat from './pages/JumlahZat';
+
 
 const Routes = () => {
   return (
@@ -31,6 +44,7 @@ const Routes = () => {
           component={MainMenu}
           title="Main Menu"
         />
+
         <Scene key="Jarak" component={Jarak} title="Jarak"/>
         <Scene key="Kecepatan" component={Kecepatan} title="Kecepatan"/>
         <Scene key="Waktu" component={Waktu} title="Waktu"/>

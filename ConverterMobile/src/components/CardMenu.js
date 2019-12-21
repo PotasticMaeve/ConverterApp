@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
+
+
 class CardMenu extends Component {
     constructor(props) {
         super(props);
         this.state = {
         };
     }
+
 
     renderRoutes(window_name){
         if(window_name == 'Jarak'){Actions.Jarak()}
@@ -23,6 +26,7 @@ class CardMenu extends Component {
     }
 
     render() {
+        
         return (
             <TouchableOpacity 
                 style={s.container} 

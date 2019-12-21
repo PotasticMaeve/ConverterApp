@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
+
+import { Actions } from 'react-native-router-flux'
 import CardMenu from '../components/CardMenu';
-import { Actions } from 'react-native-router-flux';
 
 class MainMenu extends Component {
   constructor(props) {
@@ -12,10 +13,10 @@ class MainMenu extends Component {
     };
   }
 
-  renderItem(name, image_uri){
+  renderItem(name, image_uri, action_uri){
     var el = [];
       el.push(
-        <CardMenu name={name} isLoading={true} image={image_uri}/>
+        <CardMenu name={name} isLoading={true} image={image_uri} action_uri={action_uri}/>
       )
     return el;
   }
