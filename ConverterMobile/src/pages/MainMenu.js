@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
+
 import { Actions } from 'react-native-router-flux'
 import CardMenu from '../components/CardMenu';
-// import MenuRoutes from '../MenuRoutes';
-
 
 class MainMenu extends Component {
   constructor(props) {
