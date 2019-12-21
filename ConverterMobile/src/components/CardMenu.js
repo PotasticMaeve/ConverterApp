@@ -4,6 +4,8 @@ import { Actions } from 'react-native-router-flux';
 import Jarak from '../pages/Jarak';
 import MenuRoutes from '../MenuRoutes';
 
+
+
 class CardMenu extends Component {
     constructor(props) {
         super(props);
@@ -11,12 +13,26 @@ class CardMenu extends Component {
         };
     }
 
+    Redirect_me(window_name){
+        if (window_name == "Jarak"){Actions.Jarak()}
+        if (window_name == "Kecepatan"){Actions.Kecepatan()}
+        if (window_name == "Waktu"){Actions.Waktu()}
+        if (window_name == "Massa"){Actions.Massa()}
+        if (window_name == "Temperatur"){Actions.Temperatur()}
+        if (window_name == "Energi"){Actions.Energi()}
+        if (window_name == "Daya"){Actions.Daya()}
+        if (window_name == "Gaya"){Actions.Gaya()}
+        if (window_name == "Intensitas Cahaya"){Actions.IntenCahaya()}
+        if (window_name == "Jumlah Zat"){Actions.JumlahZat()}
+    }
+
     render() {
+        
         return (
             <TouchableOpacity 
                 style={s.container} 
                 activeOpacity={0.7}
-                onPress={() => Actions.Jarak()}
+                onPress={() => this.Redirect_me(this.props.name) }
             >
                 <View style={{ height:'70%', width: '100%', borderRadius:15}}>
                     <Image
