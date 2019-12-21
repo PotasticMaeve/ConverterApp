@@ -1,0 +1,25 @@
+{
+  "name": "converterserver",
+  "version": "1.0.0",
+  "description": "Server Endpoint for ConverterApp",
+  "main": "main.js",
+  "scripts": {
+    "start": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/accalina/ConverterApp.git"
+  },
+  "author": "Accalina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/accalina/ConverterApp/issues"
+  },
+  "homepage": "https://github.com/accalina/ConverterApp#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2"
+  }
+}
