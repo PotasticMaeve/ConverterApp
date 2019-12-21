@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
 import { 
   Router, 
   Scene,
+  Actions
 } from 'react-native-router-flux';
-
-import Home from './pages/Home';
-import MainMenu from './pages/MainMenu';
 import Jarak from './pages/Jarak';
 import Kecepatan from './pages/Kecepatan';
 import Waktu from './pages/Waktu';
@@ -18,34 +15,11 @@ import Gaya from './pages/Gaya';
 import IntenCahaya from './pages/IntenCahaya';
 import JumlahZat from './pages/JumlahZat';
 
-import Jarak from './pages/Jarak';
-import Kecepatan from './pages/Kecepatan';
-import Waktu from './pages/Waktu';
-import Massa from './pages/Massa';
-import Temperatur from './pages/Temperatur';
-import Energi from './pages/Energi';
-import Daya from './pages/Daya';
-import Gaya from './pages/Gaya';
-import IntenCahaya from './pages/IntenCahaya';
-import JumlahZat from './pages/JumlahZat';
-
-
-const Routes = () => {
+const MenuRoutes = () => {
   return (
     <Router>
-      <Scene key="root">
-        <Scene key="Home"
-          hideNavBar={true}
-          component={Home}
-          initial
-        />
-        <Scene
-          key="MainMenu"
-          component={MainMenu}
-          title="Main Menu"
-        />
-
-        <Scene key="Jarak" component={Jarak} title="Jarak"/>
+      <Scene key="root" tabs={true}>
+        <Scene key="Jarak" component={Jarak} title="Jarak" hideNavBar initial/>
         <Scene key="Kecepatan" component={Kecepatan} title="Kecepatan"/>
         <Scene key="Waktu" component={Waktu} title="Waktu"/>
         <Scene key="Massa" component={Massa} title="Massa"/>
@@ -60,4 +34,4 @@ const Routes = () => {
   );
 }
 
-export default Routes;
+export default MenuRoutes;
