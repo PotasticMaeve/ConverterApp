@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
 import CardMenu from '../components/CardMenu';
-import MenuRoutes from '../MenuRoutes';
+import { Actions } from 'react-native-router-flux';
 
 class MainMenu extends Component {
   constructor(props) {
@@ -25,7 +25,6 @@ class MainMenu extends Component {
       <View style={s.container}>
         <ScrollView style={s.scrollStyle} showsVerticalScrollIndicator={false}>
           <View style={s.listMenu}>
-            {/* <MenuRoutes /> */}
             {this.renderItem('Jarak', 'https://static.boredpanda.com/blog/wp-content/uploads/2016/08/cute-kittens-30-57b30ad41bc90__605.jpg')} 
             {this.renderItem('Kecepatan', 'https://www.vets4pets.com/siteassets/species/cat/kitten/tiny-kitten-in-field.jpg')} 
             {this.renderItem('Waktu', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIe05IvxnGnh4cGpF8yBqzTd-nuADAAMFjqEM4jFVY3OR4yLGF&s')} 

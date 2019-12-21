@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity, Picker} from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import { Actions } from 'react-native-router-flux';
-import Jarak from '../pages/Jarak';
-import MenuRoutes from '../MenuRoutes';
 
 class CardMenu extends Component {
     constructor(props) {
@@ -11,12 +9,25 @@ class CardMenu extends Component {
         };
     }
 
+    renderRoutes(window_name){
+        if(window_name == 'Jarak'){Actions.Jarak()}
+        if(window_name == 'Kecepatan'){Actions.Kecepatan()}
+        if(window_name == 'Waktu'){Actions.Waktu()}
+        if(window_name == 'Massa'){Actions.Massa()}
+        if(window_name == 'Temperatur'){Actions.Temperatur()}
+        if(window_name == 'Energi'){Actions.Energi()}
+        if(window_name == 'Daya'){Actions.Daya()}
+        if(window_name == 'Gaya'){Actions.Gaya()}
+        if(window_name == 'IntenCahaya'){Actions.IntenCahaya()}
+        if(window_name == 'JumlahZat'){Actions.JumlahZat()}
+    }
+
     render() {
         return (
             <TouchableOpacity 
                 style={s.container} 
                 activeOpacity={0.7}
-                onPress={() => Actions.Jarak()}
+                onPress={() => this.renderRoutes(this.props.name)}
             >
                 <View style={{ height:'70%', width: '100%', borderRadius:15}}>
                     <Image
