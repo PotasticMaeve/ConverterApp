@@ -26,6 +26,7 @@ module.exports = function(app){
         from    = req.body.from
         to      = req.body.to
 
+        console.log(req.body)
         hasil = konverter.convert_massa(from, to, val)
         res.send({hasil: hasil})
     })
@@ -57,4 +58,13 @@ module.exports = function(app){
         res.send({hasil: hasil})
     })
 
+    app.post('/gaya', (req, res) => {
+        val     = req.body.val
+        from    = req.body.from
+        to      = req.body.to
+
+        console.log(req.body)
+        hasil = konverter.convert_gaya(from, to, val)
+        res.send({hasil: hasil})
+    })
 }

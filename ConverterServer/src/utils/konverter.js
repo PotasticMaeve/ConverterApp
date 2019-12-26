@@ -94,3 +94,14 @@ exports.convert_temperatur = function(dari, ke, nilai){
     }
     return `${hasil} ${ke}`
 }
+
+exports.convert_gaya = function(dari, ke, nilai){
+    base_val = {
+        newton  : 100000,
+        kgm2    : 1,
+        dyne    : 1,
+    }
+    
+    hasil = nilai * base_val[dari] / base_val[ke]
+    return `${hasil} ${ke}`
+}

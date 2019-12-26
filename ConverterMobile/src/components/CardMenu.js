@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
-
-
 class CardMenu extends Component {
     constructor(props) {
         super(props);
@@ -21,8 +19,8 @@ class CardMenu extends Component {
         if(window_name == 'Energi'){Actions.Energi()}
         if(window_name == 'Daya'){Actions.Daya()}
         if(window_name == 'Gaya'){Actions.Gaya()}
-        if(window_name == 'IntenCahaya'){Actions.IntenCahaya()}
-        if(window_name == 'JumlahZat'){Actions.JumlahZat()}
+        if(window_name == 'Intensitas Cahaya'){Actions.IntenCahaya()}
+        if(window_name == 'Jumlah Zat'){Actions.JumlahZat()}
     }
 
     render() {
