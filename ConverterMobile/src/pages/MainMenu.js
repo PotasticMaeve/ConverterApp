@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { View, Text, ScrollView, StyleSheet, Animated, Dimensions, StatusBar } from 'react-native';
+import { View, Text, ScrollView, Animated, Dimensions } from 'react-native';
 import CardItem from '../components/CardItem';
 import LinearGradient from 'react-native-linear-gradient';
+import s from '../stylesheets/MainStyle';
 
 // COLORS
 const blueGrad = ["#4facfe", "#02f1fe"];
@@ -28,8 +29,8 @@ const img_light = require('../../assets/img/light.png');
 const img_molecule = require('../../assets/img/molecule.png');
 
 class MainMenu extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       isLoading: false,
       name: '',
@@ -69,7 +70,7 @@ class MainMenu extends Component {
 
   render() {
     return (
-      <View style={s.container}>
+      <View style={s.contMenu}>
         <Animated.View
           style={{
             position: 'absolute',
@@ -94,7 +95,7 @@ class MainMenu extends Component {
           }} 
           colors={["#008af1", "#0062eb"]}
           >
-            <View style={{flexDirection: "row", marginLeft: "27%"}}>
+            <View style={s.titleMenu}>
               <Text style={[s.textReguler, {fontSize: 30, color: "#fafafa"}]}>Konversi</Text>
               <Text style={[s.textBold, {fontSize: 30, color: "#fafafa", opacity: this.state.textOpacity}]}> Satuan</Text>
             </View>
@@ -114,7 +115,7 @@ class MainMenu extends Component {
           {this.renderItem('Intensitas Cahaya', 'Cd', img_light, yellow2Grad)}
           {this.renderItem('Jumlah Zat', 'mol', img_molecule, bloodGrad)}
           {/* ADDING CLEARFIX */}
-          <View style={{height: 100, width: "100%"}}>
+          <View style={s.clearSpace}>
 
           </View>
         </ScrollView>
@@ -122,36 +123,5 @@ class MainMenu extends Component {
     );
   }
 }
-
-const s = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f5f6fa',
-  },
-  scrollStyle: {
-    paddingHorizontal: 5,
-    paddingBottom: 10,
-    width: "100%",
-    height: 'auto',
-    zIndex: 2
-
-  },
-  listMenu: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    width: '100%',
-    paddingBottom: 100,
-    paddingTop: 6,
-  },
-  textBold: {
-    fontFamily: "Nunito-Bold"
-  },
-  textReguler: {
-    fontFamily: 'Nunito-Reguler'
-  }
-})
-
 
 export default MainMenu;
